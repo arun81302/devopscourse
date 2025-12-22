@@ -1,0 +1,6 @@
+f=open('data.py','r+')
+data=f.read()
+print(data)
+f.write("this is new line")
+data=f.read()
+print(data)
