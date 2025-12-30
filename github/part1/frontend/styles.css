@@ -1,0 +1,17 @@
+:root{--bg:#f6f8fa;--card:#fff;--accent:#0366d6;--muted:#6a737d}
+*{box-sizing:border-box}body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);margin:0;color:#0b0b0b}
+.container{max-width:760px;margin:48px auto;padding:24px}
+h1{margin:0 0 16px}
+.todo-form{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 1px 3px rgba(15,15,15,0.06);margin-bottom:16px}
+.field{display:flex;flex-direction:column;margin-bottom:12px}
+.field label{font-weight:600;font-size:14px;margin-bottom:6px}
+.field input,.field textarea{padding:10px;border:1px solid #e1e4e8;border-radius:6px;font-size:14px}
+.actions{display:flex;justify-content:flex-end}
+button{background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:6px;cursor:pointer}
+button:disabled{opacity:.6;cursor:not-allowed}
+.todo-list{list-style:none;padding:0;margin:0}
+.todo-item{background:var(--card);padding:12px;border-radius:8px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;border:1px solid #e6edf3}
+.todo-content{max-width:80%}
+.todo-title{font-weight:700;margin:0 0 6px}
+.todo-desc{margin:0;color:var(--muted)}
+.todo-actions button{background:transparent;border:1px solid #e1e4e8;padding:6px 8px;border-radius:6px;color:var(--muted);cursor:pointer}

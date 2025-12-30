@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>To-Do</h1>
+
+    <form id="todo-form" class="todo-form">
+      <div class="field">
+        <label for="item-name">Item Name</label>
+        <input id="item-name" name="itemName" type="text" required placeholder="Enter item name">
+      </div>
+
+      <div class="field">
+        <label for="item-desc">Item Description</label>
+        <textarea id="item-desc" name="itemDescription" rows="3" placeholder="Enter item description"></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Add Item</button>
+      </div>
+    </form>
+
+    <section>
+      <h2>Your Items</h2>
+      <ul id="todo-list" class="todo-list"></ul>
+    </section>
+  </main>
+
+  <script src="todo.js"></script>
+</body>
+</html>
