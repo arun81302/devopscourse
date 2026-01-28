@@ -4,9 +4,9 @@ import json
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app) 
 
-# In-memory storage (you can replace with database)
+
 submissions = []
 
 @app.route('/')
@@ -20,10 +20,10 @@ def home():
 @app.route('/api/submit', methods=['POST'])
 def submit_form():
     try:
-        # Get form data from request
+
         data = request.get_json()
         
-        # Validate required fields
+    
         required_fields = ['name', 'email', 'phone', 'dob', 'gender', 'course']
         for field in required_fields:
             if field not in data or not data[field]:
@@ -32,11 +32,11 @@ def submit_form():
                     'message': f'Missing required field: {field}'
                 }), 400
         
-        # Add timestamp
+
         data['timestamp'] = datetime.now().isoformat()
         data['id'] = len(submissions) + 1
         
-        # Store submission
+
         submissions.append(data)
         
         print(f"New submission received: {data['name']} - {data['email']}")
